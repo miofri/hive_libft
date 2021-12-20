@@ -6,7 +6,7 @@
 /*   By: skesuma <skesuma@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 15:04:45 by skesuma           #+#    #+#             */
-/*   Updated: 2021/12/15 15:16:12 by skesuma          ###   ########.fr       */
+/*   Updated: 2021/12/20 16:57:08 by skesuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 				return ((char *)haystack);
 			}
 		}
+		i = i - y + 1;
 		y = 0;
-		i++;
 	}
 	return (0);
 }
