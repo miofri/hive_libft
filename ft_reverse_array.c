@@ -26,16 +26,6 @@ char	*ft_reverse_array(char *ptr)
 	rpt[len--] = '\0';
 	while (len >= 0)
 		rpt[len--] = ptr[i++];
-	i = 0;
-	while (rpt[i])
-	{
-		if (i == 0 && rpt[i] == '-')
-			i++;
-		else if (ft_isdigit(rpt[i]))
-			i++;
-		else
-			rpt[i] = '\0';
-	}
 	return (rpt);
 }
 
