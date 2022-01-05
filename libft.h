@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skesuma <skesuma@student.42.fr>            +#+  +:+       +#+        */
+/*   By: skesuma <skesuma@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:38:50 by skesuma           #+#    #+#             */
-/*   Updated: 2021/12/15 16:00:36 by skesuma          ###   ########.fr       */
+/*   Updated: 2022/01/03 14:48:45 by skesuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,18 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <string.h>
 
+typedef struct s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 char	**ft_free2darr(char **ptr, int y);
 int		ft_character_counter(char *s, char c);
 int		ft_w_count(char *s, char c);
